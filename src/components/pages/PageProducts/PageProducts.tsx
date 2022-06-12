@@ -13,7 +13,7 @@ export default function PageProducts() {
 
   return (
     <div className={classes.content}>
-      <h1>Welcome to our cloud store...</h1>
+      <h1>Welcome to AWS API Gateway store!</h1>
       <Products/>
     </div>
   );

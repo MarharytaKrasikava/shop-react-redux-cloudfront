@@ -34,9 +34,13 @@ export default function Products() {
   const classes = useStyles();
   const [products, setProducts] = useState<Product[]>([]);
 
+  const getProducts = async () => {
+    const { data } = await axios.get(`${API_PATHS.bff}/products`);
+    setProducts(data);
+  };
+
   useEffect(() => {
-    axios.get(`${API_PATHS.bff}/products`)
-      .then(res => setProducts(res.data));
+    getProducts();
   }, [])
 
   return (
