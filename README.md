@@ -46,6 +46,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Task 2: Serve SPA in AWS S3 and Cloudfront Services
 
-Cloudront URL: https://dkg3n1e6rpay2.cloudfront.net/
+Cloudront URL: https://dv0irgcfxah3p.cloudfront.net/
 
-S3 WebSite: http://rs-nodejs-aws-2.s3-website-us-east-1.amazonaws.com
+S3 WebSite:http://rs-nodejs-aws.s3-website-eu-west-1.amazonaws.com/
