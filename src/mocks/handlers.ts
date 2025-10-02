@@ -7,7 +7,11 @@ import { AvailableProduct, Product } from "~/models/Product";
 
 export const handlers = [
   rest.get(`${API_PATHS.bff}/products`, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.delay(), ctx.json<Product[]>(products));
+    return res(
+      ctx.status(200),
+      ctx.delay(),
+      ctx.json<Partial<Product>[]>(products)
+    );
   }),
   rest.put(`${API_PATHS.bff}/products`, (req, res, ctx) => {
     return res(ctx.status(200));
@@ -19,7 +23,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.delay(),
-      ctx.json<AvailableProduct[]>(availableProducts)
+      ctx.json<Partial<AvailableProduct>[]>(availableProducts)
     );
   }),
   rest.get(`${API_PATHS.bff}/products/:id`, (req, res, ctx) => {
@@ -30,7 +34,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.delay(),
-      ctx.json<AvailableProduct>(product)
+      ctx.json<Partial<AvailableProduct>>(product)
     );
   }),
   rest.get(`${API_PATHS.cart}/profile/cart`, (req, res, ctx) => {

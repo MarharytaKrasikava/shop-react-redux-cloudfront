@@ -1,6 +1,6 @@
 import { Product } from "~/models/Product";
 
 export type CartItem = {
-  product: Product;
+  product: Partial<Product>;
   count: number;
 };

@@ -3,7 +3,7 @@ import { CartItem } from "~/models/CartItem";
 import { Order } from "~/models/Order";
 import { AvailableProduct, Product } from "~/models/Product";
 
-export const products: Product[] = [
+export const products: Partial<Product>[] = [
   {
     description: "Short Product Description1",
     id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
@@ -42,7 +42,7 @@ export const products: Product[] = [
   },
 ];
 
-export const availableProducts: AvailableProduct[] = products.map(
+export const availableProducts: Partial<AvailableProduct>[] = products.map(
   (product, index) => ({ ...product, count: index + 1 })
 );
 
