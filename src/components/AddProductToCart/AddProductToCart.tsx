@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import { useCart, useInvalidateCart, useUpsertCart } from "~/queries/cart";
 
 type AddProductToCartProps = {
-  product: Product;
+  product: Partial<Product>;
 };
 
 export default function AddProductToCart({ product }: AddProductToCartProps) {
